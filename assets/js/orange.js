@@ -33,15 +33,13 @@ var showPage = () => {
                     direction: "up"
                 }, 900, () => {});
                 setTimeout(index => {
-                    $("#content > div:nth-child(".concat((index + 1).toString(), ") .sectionContent.center")).show("slide", {
-                        direction: "down"
-                    }, 1500, () => {});
                     $("#content > div:nth-child(".concat((index + 1).toString(), ") .sectionContent.left")).show("slide", {
                         direction: "right"
                     }, 1500, () => {});
                     $("#content > div:nth-child(".concat((index + 1).toString(), ") .sectionContent.right")).show("slide", {
                         direction: "left"
                     }, 1800, () => {});
+                    $("#content > div:nth-child(".concat((index + 1).toString(), ") .sectionContent.center")).show("fade", {}, 1500, () => {});
                 }, 1000, index);
             }
         } else {
@@ -60,7 +58,7 @@ var addScrollifyToElements = () => {
         scrollSpeed: 1000,
         offset: 0,
         scrollbars: true,
-        standardScrollElements: "p",
+        standardScrollElements: "p,.projects_internal",
         setHeights: true,
         overflowScroll: true,
         updateHash: false,
@@ -70,12 +68,12 @@ var addScrollifyToElements = () => {
             console.log("After called.");
             console.log(sidebar_active_href.attr("href"), " :: ", "#".concat($.scrollify.current().attr("id")));
             $(".header_class > ul li").each(function(index) {
-            	if ($(".header_class > ul li:nth-child(".concat((index + 1).toString(), ") a")).attr("href") == "#".concat($.scrollify.current().attr("id"))) {
-            		$(".header_class > ul li:nth-child(".concat((index + 1).toString(), ") a")).addClass("active");
-            		sidebar_active_href = $(".header_class > ul li:nth-child(".concat((index + 1).toString(), ") a"));
-            	} else {
-            		$(".header_class > ul li:nth-child(".concat((index + 1).toString(), ") a")).removeClass("active");
-            	}
+                if ($(".header_class > ul li:nth-child(".concat((index + 1).toString(), ") a")).attr("href") == "#".concat($.scrollify.current().attr("id"))) {
+                    $(".header_class > ul li:nth-child(".concat((index + 1).toString(), ") a")).addClass("active");
+                    sidebar_active_href = $(".header_class > ul li:nth-child(".concat((index + 1).toString(), ") a"));
+                } else {
+                    $(".header_class > ul li:nth-child(".concat((index + 1).toString(), ") a")).removeClass("active");
+                }
             });
             showPage();
         },

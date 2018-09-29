@@ -1,0 +1,75 @@
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flex-container .projects_internal {
+    text-align: center;
+    position: relative;
+    /* Background Gradient for Complementary Colors */
+    background-color: #FFFFFF;
+    /* For WebKit (Safari, Chrome, etc) */
+    background: #FFFFFF -webkit-gradient(linear, left top, left bottom, from(#E6E4E4), to(#FFFFFF)) no-repeat;
+    /* Mozilla,Firefox/Gecko */
+    background: #FFFFFF -moz-linear-gradient(top, #E6E4E4, #FFFFFF) no-repeat;
+    /* IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6E4E4, endColorstr=#FFFFFF) no-repeat;
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6E4E4, endColorstr=#E6E4E4)" no-repeat;
+    margin: 2%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-weight: bold;
+    height: 350px;
+}
+
+.projects_internal .projects_title {
+    padding-top: 8px;
+    color: #000000;
+    font-size: 35px;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    height: 80px;
+    width: 100%;
+}
+
+.projects_internal .projects_title:nth-child(even) {
+    border-bottom-right-radius: 10px;
+}
+.projects_internal .projects_title:nth-child(odd) {
+    border-bottom-left-radius: 10px;
+}
+
+.projects_internal .projects_content {
+    border-top-style: solid;
+    border-top-width: 3px;
+    height: 220px;
+    width: 100%;
+}
+
+.projects_internal .projects_content:nth-child(even) {
+    border-top-left-radius: 10px;
+}
+.projects_internal .projects_content:nth-child(odd) {
+    border-top-right-radius: 10px;
+}
+
+.projects_internal ul {
+    list-style-type:none;
+}
+
+.projects_internal .projects_footer {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    height: 50px;
+}
+
+.projects_internal .projects_footer > a img {
+    width: 40px;
+    height: 40px;
+}
+
+.spacer {
+    height: 5px;
+}
