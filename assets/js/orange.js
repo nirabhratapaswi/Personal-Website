@@ -28,6 +28,7 @@ var showPage = () => {
         // console.log("Searching:", sidebar_active_href.attr("href"), " :: ", "#".concat($($("#content > div")[index]).attr("id")));
         if (sidebar_active_href.attr("href") == "#".concat($($("#content > div")[index]).attr("id"))) {
             // console.log("Flag 1 for: ", "#".concat($($("#content > div")[index]).attr("id")));
+            console.log("Index: ", index);
             if (index > 0) {
                 $("#content > div:nth-child(".concat((index + 1).toString(), ") .sectionTitle")).show("slide", {
                     direction: "up"
@@ -40,6 +41,21 @@ var showPage = () => {
                         direction: "left"
                     }, 1800, () => {});
                     $("#content > div:nth-child(".concat((index + 1).toString(), ") .sectionContent.center")).show("fade", {}, 1500, () => {});
+                    if (index != 5) {
+                        $("#content > div:nth-child(".concat((index + 1).toString(), ") .sectionContent.center")).show("fade", {}, 1500, () => {});
+                    } else {
+                        $("#content > div:nth-child(".concat((index + 1).toString(), ") .sectionContent.center")).show("fade", {}, 600, () => {});
+                        setTimeout(() => {
+                            $('.skillbar').each(index_1 => {
+                                $("#content > div:nth-child(".concat((index + 1).toString(), ") .sectionFooter")).show("slide", {
+                                    direction: "down"
+                                }, 1000, () => {});
+                                $('.skillbar:nth-child('.concat((index_1 + 1).toString(), ")")).find('.skillbar-bar').animate({
+                                    width: $('.skillbar:nth-child('.concat((index_1 + 1).toString(), ")")).attr('data-percent')
+                                }, 1500);
+                            });
+                        }, 600);
+                    }
                 }, 1000, index);
             }
         } else {

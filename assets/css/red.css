@@ -10,13 +10,29 @@ body {
     height: 100%;
     width: 100%;
     font-weight: bold;
+    background-color: #ffffff;
     /*font-size: 15px;*/
     line-height: 1.8;
-    color: rgba(0, 0, 0, 0.7);
-    background-image: linear-gradient(to bottom right, #ffffff, #E6E4E4);
-    background-repeat: no-repeat;
-    background-size: auto;
+    /*color: rgba(0, 0, 0, 0.7);*/
+    color: #AB987A;
     text-align: center;
+}
+
+.background_img {
+    position: fixed;
+    width: 100%;
+    height: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: -100000;
+    opacity: 0.8;
+}
+
+.background_img_img {
+  width: 100%;
+  height: 100%;
 }
 
 input:focus {
@@ -52,7 +68,8 @@ button:focus {
 }
 
 .navigation.active .navigation__inner {
-  background-color: #f2f3f7;
+  /*background-color: #f2f3f7;*/
+  background-color: #9CC9CB;
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
   -webkit-transition: background-color 0s linear 599ms, -webkit-transform 300ms linear;
@@ -94,7 +111,7 @@ button:focus {
   height: 100%;
   top: 0;
   right: 0;
-  background-color: #f2f3f7;
+  background-color: #9CC9CB;
   border-radius: 50%;
   z-index: -1;
   -webkit-transition: all 300ms linear;
@@ -161,6 +178,7 @@ elastic {  0% {
     border-radius: 3px;
     width: 40px;
     cursor: pointer;
+    z-index: 1;
 }
 
 #sidebarCollapse {
@@ -170,6 +188,7 @@ elastic {  0% {
     background-color: transparent;
     border-width: 0px;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 #sidebarCollapse span {

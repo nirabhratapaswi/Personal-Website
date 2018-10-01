@@ -6,6 +6,8 @@ import '../scss/red.scss'; // SCSS import
 import '../css/red.css'; // built with webpack
 import '../css/orange.css'; // built with webpack
 import '../css/yellow.css'; // built with webpack
+import '../css/green.css'; // built with webpack
+import '../css/blue.css'; // built with webpack
 var $ = require("jquery");
 import 'bootstrap'; // bootstrap js import
 import 'jquery-scrollify';
