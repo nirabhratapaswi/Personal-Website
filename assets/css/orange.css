@@ -9,7 +9,7 @@
     font-weight: bold;
     text-decoration: none;
 	font-size: 70px;
-    color: #680F0F;
+    color: #96858F;
 }
 
 .sectionFooter {
@@ -17,7 +17,7 @@
     width: 100%;
     bottom: 0;
     height: 130px;
-    background-color: #370E0E;
+    background-color: #ffffff;
     opacity: 0.9;
     text-align: center;
     display: none;
@@ -25,6 +25,7 @@
 
 .footer_title {
     padding-top: 3px;
+    color: #8b7765;
 }
 
 .footer_links {
