@@ -1,5 +1,6 @@
 .scrollify {
     position: relative;
+    /*min-height: 100%;*/
     /*z-index: -1000;*/
 }
 
@@ -94,6 +95,15 @@ a:hover {
 
 .sectionTitle {
     display: none;
+}
+
+.hiddenSectionTitle {
+    text-decoration: underline;
+    font-family: 'Spectral';font-size: 60px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 70px;
+    color: #D5D5D5;
 }
 
 .sectionContent {

@@ -1,7 +1,8 @@
 /**
  *	Contains projects options
  **/
-var $ = require("jquery");
+// var $ = require("jquery");
+// import * as $ from 'jquery';
 
 var resizeBasedOnWindow = () => {
     if ($(window).width() > 1100) {

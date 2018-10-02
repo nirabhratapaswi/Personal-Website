@@ -2,15 +2,16 @@
 *	Contains nav-bar and page interaction options, see orange.js for scrollify
 **/
 
-import '../scss/red.scss'; // SCSS import
+/*import '../scss/red.scss'; // SCSS import
 import '../css/red.css'; // built with webpack
 import '../css/orange.css'; // built with webpack
 import '../css/yellow.css'; // built with webpack
 import '../css/green.css'; // built with webpack
 import '../css/blue.css'; // built with webpack
-var $ = require("jquery");
+// var $ = require("jquery");
+import * as $ from 'jquery';
 import 'bootstrap'; // bootstrap js import
-import 'jquery-scrollify';
+// import 'jquery-scrollify';*/
 
 $(document).ready(function() {
     // console.log("Jquery loaded.");

@@ -4,7 +4,8 @@ module.exports = {
     entry: {
         "light.js": [
             path.resolve(__dirname, './assets/js/red.js'),
-            path.resolve(__dirname, './assets/js/orange.js'),
+            // path.resolve(__dirname, './assets/js/orange.js'),
+            // path.resolve(__dirname, './assets/js/orange_new.js'),
             path.resolve(__dirname, './assets/js/yellow.js')
         ]
     },

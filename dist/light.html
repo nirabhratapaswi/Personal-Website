@@ -2,7 +2,12 @@
 <html>
 	<head>
 		<title>Nirab</title>
-		<script type="text/javascript" src="light.js"></script>
+		<link rel="stylesheet" href="../assets/css/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="../assets/css/red.css">
+		<link rel="stylesheet" type="text/css" href="../assets/css/orange.css">
+		<link rel="stylesheet" type="text/css" href="../assets/css/yellow.css">
+		<link rel="stylesheet" type="text/css" href="../assets/css/green.css">
+		<link rel="stylesheet" type="text/css" href="../assets/css/blue.css">
 		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
@@ -20,6 +25,13 @@
 			    background-size: cover;*/
 			}
 		</style> -->
+		<script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../assets/css/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<!-- <script type="text/javascript" src="light.js"></script> -->
+		<script type="text/javascript" src="../assets/js/red.js"></script>
+		<script type="text/javascript" src="../assets/js/yellow.js"></script>
+		<script type="text/javascript" src="../assets/js/orange_new.js"></script>	<!-- Order is very important -->
 	</head>
 
 	<body>
@@ -53,6 +65,7 @@
         	</div>
         	<div id="aboutMe" class="scrollify">
         		<div class="sectionTitle">ABOUT ME</div>
+        		<div class="hiddenSectionTitle">ABOUT ME Hide</div>
         		<div class="sectionContent left">
         			<p><span style="font-size: 26; font-weight: bolder; text-decoration: underline; color: #96858F;">name</span>: Nirabhra Tapaswi</p>
         			<p><span style="font-size: 26; font-weight: bolder; text-decoration: underline; color: #96858F;">from</span>: Kolkata, West Bengal</p>
@@ -71,9 +84,11 @@
         	</div>
         	<div id="portfolio" class="scrollify">
         		<div class="sectionTitle">PORTFOLIO</div>
+        		<div class="hiddenSectionTitle">PORTFOLIO Hide</div>
         	</div>
         	<div id="projects" class="scrollify">
         		<div class="sectionTitle">PROJECTS</div>
+        		<div class="hiddenSectionTitle">PROJECTS Hide</div>
         		<div class="sectionContent center">
         			<div class="flex-container">
         				<p>
@@ -149,6 +164,7 @@
         	</div>
         	<div id="workedAt" class="scrollify">
         		<div class="sectionTitle">WORKED IN</div>
+        		<div class="hiddenSectionTitle">WORKED IN Hide</div>
         		<div class="sectionContent center">
         			<div class="workedAt_timeline">
 						<div class="workedAt_container workedAt_left">
@@ -184,6 +200,7 @@
         	</div>
         	<div id="skills" class="scrollify">
         		<div class="sectionTitle">SKILLS</div>
+        		<div class="hiddenSectionTitle">SKILLS Hide</div>
         		<div class="sectionContent center">
         			<div class="skillbar clearfix" data-percent="70%">
 						<div class="skillbar-title" style="background: #d35400;"><span>C++</span></div>
