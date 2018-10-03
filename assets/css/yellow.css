@@ -1,19 +1,21 @@
 .flex-container {
     display: flex;
     flex-flow: row wrap;
+    max-height: 810px;
+    overflow-y: auto;
 }
 
 .flex-container .projects_internal {
     text-align: center;
     position: relative;
     /* Background Gradient for Complementary Colors */
-    background-color: #FFFFFF;
+    background-color: #F2EECB;
     /* For WebKit (Safari, Chrome, etc) */
-    background: #FFFFFF -webkit-gradient(linear, left top, left bottom, from(#E6E4E4), to(#FFFFFF)) no-repeat;
+    /*background: #F2EECB -webkit-gradient(linear, left top, left bottom, from(#E6E4E4), to(#F2EECB)) no-repeat;*/
     /* Mozilla,Firefox/Gecko */
-    background: #FFFFFF -moz-linear-gradient(top, #E6E4E4, #FFFFFF) no-repeat;
+    /*background: #F2EECB -moz-linear-gradient(top, #E6E4E4, #F2EECB) no-repeat;*/
     /* IE 5.5 - 7 */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6E4E4, endColorstr=#FFFFFF) no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6E4E4, endColorstr=#F2EECB) no-repeat;
     /* IE 8 */
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6E4E4, endColorstr=#E6E4E4)" no-repeat;
     margin: 2%;
@@ -21,11 +23,15 @@
     background-size: cover;
     font-weight: bold;
     height: 350px;
+    border-style: solid;
+    border-color: #F2EECB;
+    border-width: 1px;
+    border-radius: 10px;
 }
 
 .projects_internal .projects_title {
     padding-top: 8px;
-    color: #8b7765;
+    color: #0ABDA0;
     font-size: 35px;
     border-bottom-style: solid;
     border-bottom-width: 3px;
@@ -60,8 +66,8 @@
 
 .projects_internal .projects_footer {
     position: absolute;
-    bottom: 5px;
-    left: 5px;
+    bottom: 4%;
+    left: 4%;
     height: 50px;
 }
 
@@ -72,4 +78,38 @@
 
 .spacer {
     height: 5px;
+}
+
+.ityped-cursor {
+    font-size: 2.8rem;  /*2.2rem;*/
+    opacity: 1;
+    color: #ff471a;
+    -webkit-animation: blink 0.3s infinite;
+    -moz-animation: blink 0.3s infinite;
+    animation: blink 0.3s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+.ityped {
+    color: #0ABDA0;
+    font-style: italic;
+    font-size: 38px;
 }

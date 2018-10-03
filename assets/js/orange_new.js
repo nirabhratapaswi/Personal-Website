@@ -77,7 +77,7 @@ var whichDiv = (scroll_top) => {
 
 var gotoDiv = (div_index) => {
     $("html, body").animate({
-        scrollTop: div_range[div_index][0] // or .offset().top() can be used of the next jQuery element
+        scrollTop: div_range[div_index][0] + 10 // or .offset().top() can be used of the next jQuery element
     }, delay_time_for_event_listener, "swing", () => {
         console.log("Transition finished");
     });
@@ -103,11 +103,6 @@ var addScrollEventListenerFunction = (scroll_top) => {
     } else if (scroll_top < previous_top) {
         // console.log("Scrolling up")
         if (checkIfDivEnd(current_div, scroll_top, false)) { // changing divs!!
-            /*$("html, body").animate({
-                scrollTop: div_range[div_id_list[div_id_list.indexOf(current_div) - 1]][0] // or .offset().top() can be used of the next jQuery element
-            }, delay_time_for_event_listener, "swing", () => {
-                console.log("Transition finished");
-            });*/
             gotoDiv(div_id_list[div_id_list.indexOf(current_div) - 1]);
             $(window).off("scroll", addScrollEventListenerFunction);
             setTimeout(() => {
@@ -135,27 +130,50 @@ var addScrollEventListenerFunction = (scroll_top) => {
     previous_top = scroll_top;
 }
 
+var summation = () => {
+    for (let i = 1; i < arguments.length; i++) {
+        arguments[i] += arguments[i - 1];
+    }
+    return arguments[arguments.length - 1];
+}
+
+var checkChildrenHeights = (jqueryElementId) => {
+    $("#".concat(jqueryElementId)).children("div").each(index => {
+        // console.log("Index: ", index, ", height: ", $("#".concat(jqueryElementId, " div:nth-child(", (index+1).toString(), ")")).height());
+    });
+}
+
+var resizeBasedOnWindowForScroll = () => {
+    if (resized) {
+        for (let x in div_id_list) {
+            if ($("#".concat(div_id_list[x])).height() < $(window).height() + 25) {
+                $("#".concat(div_id_list[x])).css({
+                    "height": ($(window).height() + 25).toString()
+                });
+            }
+        }
+        let start_pos = 0,
+            end_pos;
+        for (let div in div_id_list) {
+            checkChildrenHeights(div_id_list[div]);
+            if (div < div_id_list.length - 1) {
+                // console.log($("#".concat(div_id_list[div])), " : ", $("#".concat(div_id_list[parseInt(div)+1])));
+                div_range[div_id_list[div]] = [$("#".concat(div_id_list[div])).offset().top, $("#".concat(div_id_list[parseInt(div) + 1])).offset().top];
+            } else {
+                // console.log($("#".concat(div_id_list[div])).offset().top, " : ", $("#".concat(div_id_list[div])).offset().top + $("#".concat(div_id_list[div])).height());
+                div_range[div_id_list[div]] = [$("#".concat(div_id_list[div])).offset().top, $("#".concat(div_id_list[div])).offset().top + $("#".concat(div_id_list[div])).height()];
+            }
+            console.log("For index: ", div, ", ele: ", div_id_list[div], ", height: ", div_range[div_id_list[div]][1] - div_range[div_id_list[div]][0]);
+        }
+        console.log(div_range);
+        resized = false;
+    } else {
+        setTimeout(resizeBasedOnWindowForScroll, 50);
+    }
+}
+
 $(() => {
-    for (let x in div_id_list) {
-        if ($("#".concat(div_id_list[x])).height() < $(window).height() + 100) {
-            $("#".concat(div_id_list[x])).css({
-                "height": ($(window).height() + 100).toString()
-            })
-        }
-    }
-    let start_pos = 0,
-        end_pos;
-    for (let div in div_id_list) {
-        console.log("For index: ", div, ", ele: ", div_id_list[div]);
-        if (div < div_id_list.length - 1) {
-            // console.log($("#".concat(div_id_list[div])), " : ", $("#".concat(div_id_list[parseInt(div)+1])));
-            div_range[div_id_list[div]] = [$("#".concat(div_id_list[div])).offset().top, $("#".concat(div_id_list[parseInt(div) + 1])).offset().top];
-        } else {
-            // console.log($("#".concat(div_id_list[div])).offset().top, " : ", $("#".concat(div_id_list[div])).offset().top + $("#".concat(div_id_list[div])).height());
-            div_range[div_id_list[div]] = [$("#".concat(div_id_list[div])).offset().top, $("#".concat(div_id_list[div])).offset().top + $("#".concat(div_id_list[div])).height()];
-        }
-    }
-    console.log(div_range);
+    resizeBasedOnWindowForScroll();
     $(window).on("scroll", addScrollEventListenerFunction);
 
     //  For jquery animations
@@ -171,6 +189,16 @@ $(() => {
         $(this).addClass("active");
         sidebar_active_href = $(this);
         showPage();
-        // $.scrollify("move", $(this).attr("href"));
+    });
+
+    $(window).resize(resizeBasedOnWindowForScroll);
+
+    $(".header_class > ul li a").click(function() {
+        console.log("header class element clicked: ", $(this).attr("href"));
+        $(window).off("scroll", addScrollEventListenerFunction);
+        setTimeout(() => {
+            $(window).on("scroll", addScrollEventListenerFunction);
+        }, delay_time_for_event_listener+100);
+        gotoDiv($(this).attr("href").split("#")[1]);
     });
 });

@@ -29,12 +29,12 @@
 .workedAt_container::after {
     content: '';
     position: absolute;
-    width: 20px;
-    height: 20px;
-    right: -17px;
+    width: 15px;
+    height: 15px;
+    right: -10px;
     background-color: transparent;
-    border: 2px solid #8b7765;
-    top: 15px;
+    border: 5px solid #8b7765;
+    top: 20px;
     border-radius: 50%;
     z-index: 1;
 }
@@ -79,16 +79,16 @@
 
 /* Fix the circle for containers on the right side */
 .workedAt_right::after {
-    left: -16px;
+    left: -10px;
 }
 
 /* The actual content */
 .workedAt_content {
-    padding: 20px 30px;
+    padding: 10px 20px;
     background-color: transparent;
     position: relative;
     border-radius: 6px;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
@@ -125,7 +125,7 @@
 }
 
 .company_span {
-    color: #8b7765;
+    color: #0ABDA0;
     font-weight: bolder;
     font-size: 20px;
 }
