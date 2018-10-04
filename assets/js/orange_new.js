@@ -205,4 +205,25 @@ $(() => {
         });
         gotoDiv($(this).attr("href").split("#")[1]);
     });
+
+    $(".scroll_down").click(function() {
+        if (div_id_list.indexOf(current_div) < div_id_list.length - 1) {
+            console.log("Scrolling down, going to next div. Current div: ", current_div, ", target: ", div_range[div_id_list[div_id_list.indexOf(current_div) + 1]][0]);
+            gotoDiv(div_id_list[div_id_list.indexOf(current_div) + 1]);
+            $(window).off("scroll", addScrollEventListenerFunction);
+            setTimeout(() => {
+                $(window).on("scroll", addScrollEventListenerFunction);
+            }, delay_time_for_event_listener);
+        }
+    });
+    $(".scroll_up").click(function() {
+        if (div_id_list.indexOf(current_div) > 0) {
+            gotoDiv(div_id_list[div_id_list.indexOf(current_div) - 1]);
+            $(window).off("scroll", addScrollEventListenerFunction);
+            setTimeout(() => {
+                $(window).on("scroll", addScrollEventListenerFunction);
+            }, delay_time_for_event_listener);
+            console.log("Scrolling up, going to previous div Current div: ", current_div);
+        }
+    });
 });
