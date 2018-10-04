@@ -35,7 +35,7 @@
 * projects-header: #0ABDA0;
 * projects-background-color: #F2EECB;
 * contact-footer-background-color: #0ABDA0;
-* nav-background-color: #9099A2;
+* nav-background-color: #F2EECB;
 * nav-links-color: rgba(0, 0, 0, 0.7);
 * nav-border-color: #000000;
 * company-title-color: #0ABDA0;
@@ -137,7 +137,7 @@ button:focus {
 
 .navigation.active .navigation__inner {
   /*background-color: #f2f3f7;*/
-  background-color: #D5D5D5;
+  background-color: #F2EECB;
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
   -webkit-transition: background-color 0s linear 699ms, -webkit-transform 400ms linear;
@@ -179,7 +179,7 @@ button:focus {
   height: 100%;
   top: 0;
   right: 0;
-  background-color: #D5D5D5;
+  background-color: #F2EECB;
   border-radius: 50%;
   z-index: -1;
   -webkit-transition: all 400ms linear;

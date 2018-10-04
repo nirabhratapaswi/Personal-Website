@@ -198,7 +198,11 @@ $(() => {
         $(window).off("scroll", addScrollEventListenerFunction);
         setTimeout(() => {
             $(window).on("scroll", addScrollEventListenerFunction);
-        }, delay_time_for_event_listener+100);
+        }, delay_time_for_event_listener + 100);
+        console.log();
+        $($(this).attr("href").concat(" > .hiddenSectionTitle")).css({
+            "display": "none"
+        });
         gotoDiv($(this).attr("href").split("#")[1]);
     });
 });

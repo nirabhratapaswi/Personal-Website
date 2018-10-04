@@ -26,6 +26,9 @@ var resizeBasedOnWindowForProjects = () => {
         $(".spacer").css("height", "2px");
         // $(".projects_internal").css("background-size", (9 * $(window).width() / 10).toString().concat("px ", ($(window).height() / 3).toString(), "px"));
     }
+    $(".sectionContent").css({
+        "max-height": ($(window).height() - $(".sectionTitle").height()).toString().concat("px")
+    });
     resized = true;
 }
 
@@ -39,10 +42,10 @@ $(document).ready(() => {
         loop: true,
         showCursor: true
     });
-	// console.log("Yellow.js is ready.");
     $(".sectionContent").css({
         "max-height": ($(window).height() - $(".sectionTitle").height()).toString().concat("px")
     });
+    console.log("Window height: ", $(window).height(), ", section height:", $(".sectionTitle").height());
 	resizeBasedOnWindowForProjects();
 	$(window).resize(resizeBasedOnWindowForProjects);
 });

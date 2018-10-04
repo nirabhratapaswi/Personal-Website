@@ -1,7 +1,7 @@
 .flex-container {
     display: flex;
     flex-flow: row wrap;
-    max-height: 810px;
+    /*max-height: 810px;*/
     overflow-y: auto;
 }
 
