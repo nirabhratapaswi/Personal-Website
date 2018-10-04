@@ -9,7 +9,7 @@
     text-align: center;
     position: relative;
     /* Background Gradient for Complementary Colors */
-    background-color: #F2EECB;
+    background-color: transparent;
     /* For WebKit (Safari, Chrome, etc) */
     /*background: #F2EECB -webkit-gradient(linear, left top, left bottom, from(#E6E4E4), to(#F2EECB)) no-repeat;*/
     /* Mozilla,Firefox/Gecko */
@@ -23,7 +23,7 @@
     background-size: cover;
     font-weight: bold;
     height: 350px;
-    border-style: solid;
+    border-style: none;
     border-color: #F2EECB;
     border-width: 1px;
     border-radius: 10px;
@@ -124,7 +124,7 @@ i {
 .scroll_up_symbol {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
-    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .scroll_down_symbol {
@@ -140,11 +140,11 @@ i {
     height: 50px;
     width: 50px;
     z-index: 1;
-    background-color: #F2EECB;
+    background-color: #2E2E31;
     border-style: solid;
     border-width: 1px;
     border-radius: 50%;
-    border-color: #b3a62d;
+    border-color: #6A696F;
     transition: 0.5s;
 }
 
@@ -155,20 +155,20 @@ i {
     height: 50px;
     width: 50px;
     z-index: 1;
-    background-color: #F2EECB;
+    background-color: #2E2E31;
     border-style: solid;
     border-width: 1px;
     border-radius: 50%;
-    border-color: #b3a62d;
+    border-color: #6A696F;
     transition: 0.5s;
 }
 
 .scroll_up:hover {
     cursor: pointer;
-    background-color: #988c26;
+    background-color: #8E8D94;
 }
 
 .scroll_down:hover {
     cursor: pointer;
-    background-color: #988c26;
+    background-color: #8E8D94;
 }

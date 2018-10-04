@@ -9,7 +9,7 @@
     font-weight: bold;
     text-decoration: none;
 	font-size: 70px;
-    color: #003cb3;
+    color: #BF0000;
 }
 
 .sectionFooter {
@@ -17,15 +17,17 @@
     width: 100%;
     bottom: 0;
     height: 130px;
-    background-color: #F2EECB;
-    opacity: 0.9;
+    background-color: #2E2E31;
+    opacity: 0.8;
     text-align: center;
     display: none;
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%;
 }
 
 .footer_title {
     padding-top: 3px;
-    color: #0ABDA0;
+    color: #BF0000;
 }
 
 .footer_links {
@@ -53,12 +55,12 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    color: rgba(0, 0, 0, 0.7);
+    color: #BFBECA;
 }
 
 .header_class > li {
     float: left;
-    color: rgba(0, 0, 0, 0.7);
+    color: #BFBECA;
 }
 
 .header_class > li a {
@@ -66,29 +68,30 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.7);
+    color: #BFBECA;
 }
 
 .header_class > li a:hover:not(.active) {
     /*background-color: black;*/
-    color: rgba(0, 0, 0, 0.7);
+    color: #BFBECA;
     text-decoration: none;
 }
 
 .active {
 	/*text-decoration: underline;*/
-	color: rgba(0, 0, 0, 0.7);
+	color: #BBB773;
     /*text-decoration-color: #0ABDA0;*/
     border-bottom: 2px solid #0ABDA0;
-    color: #000000;
 }
 
 a {
-	color: rgba(0, 0, 0, 0.7);
+	color: #BFBECA;
+    transition: 0.9s;
 }
 
 a:hover {
-	color: rgba(0, 0, 0, 0.7);
+	color: #FFF336;
+    text-decoration: none;
 }
 
 /*#content {

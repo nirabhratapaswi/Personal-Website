@@ -1,3 +1,49 @@
+var previous_top = 0,
+    div_id_list = ["aboutMe", "portfolio", "projects", "workedAt", "skills"],
+    current_div = div_id_list[0],
+    div_range = new Object(),
+    sidebar_active_href = null;
+
+const delay_time_for_event_listener = 1000;
+
+var progress_bar_list = [{
+    class_name: ".my_progress_bar_00",
+    text: "C++",
+    percentage: 75
+}, {
+    class_name: ".my_progress_bar_01",
+    text: "Java Spring Boot",
+    percentage: 50
+}, {
+    class_name: ".my_progress_bar_02",
+    text: "Javascript",
+    percentage: 85
+}, {
+    class_name: ".my_progress_bar_03",
+    text: "Angular 6",
+    percentage: 65
+}, {
+    class_name: ".my_progress_bar_04",
+    text: "Python",
+    percentage: 70
+}, {
+    class_name: ".my_progress_bar_05",
+    text: "MATLAB",
+    percentage: 60
+}, {
+    class_name: ".my_progress_bar_06",
+    text: "Git",
+    percentage: 65
+}, {
+    class_name: ".my_progress_bar_07",
+    text: "Mongo DB",
+    percentage: 70
+}, {
+    class_name: ".my_progress_bar_08",
+    text: "MySQL",
+    percentage: 75
+}];
+
 var showPage = () => {
     $("#content > div").each(index => {
         // console.log("Searching:", sidebar_active_href.attr("href"), " :: ", "#".concat($($("#content > div")[index]).attr("id")));
@@ -15,21 +61,27 @@ var showPage = () => {
                     $("#content > div:nth-child(".concat((index + 1).toString(), ") .sectionContent.right")).show("slide", {
                         direction: "left"
                     }, 1800, () => {});
-                    $("#content > div:nth-child(".concat((index + 1).toString(), ") .sectionContent.center")).show("fade", {}, 1500, () => {});
-                    if (index != 5) {
+                    // $("#content > div:nth-child(".concat((index + 1).toString(), ") .sectionContent.center")).show("fade", {}, 1500, () => {});
+                    if (index != div_id_list.indexOf("skills") + 1) {
                         $("#content > div:nth-child(".concat((index + 1).toString(), ") .sectionContent.center")).show("fade", {}, 1500, () => {});
                     } else {
                         $("#content > div:nth-child(".concat((index + 1).toString(), ") .sectionContent.center")).show("fade", {}, 600, () => {});
-                        setTimeout(() => {
-                            $('.skillbar').each(index_1 => {
-                                $("#content > div:nth-child(".concat((index + 1).toString(), ") .sectionFooter")).show("slide", {
-                                    direction: "down"
-                                }, 1000, () => {});
+                        setTimeout(index => {
+                            $("#content > div:nth-child(".concat((index + 1).toString(), ") .sectionFooter")).show("slide", {
+                                direction: "down"
+                            }, 1000, () => {});
+                            /*$('.skillbar').each(index_1 => {
+                                console.log("Skillbar children: ", index_1);
                                 $('.skillbar:nth-child('.concat((index_1 + 1).toString(), ")")).find('.skillbar-bar').animate({
                                     width: $('.skillbar:nth-child('.concat((index_1 + 1).toString(), ")")).attr('data-percent')
                                 }, 1500);
+                            });*/
+                            $('.skillbar').each(function() {
+                                $(this).find('.skillbar-bar').animate({
+                                    width: $(this).attr('data-percent')
+                                }, 1500);
                             });
-                        }, 600);
+                        }, 600, index);
                     }
                 }, 1000, index);
             }
@@ -39,15 +91,6 @@ var showPage = () => {
     });
     return;
 }
-
-// import * as $ from 'jquery';
-var previous_top = 0,
-    div_id_list = ["aboutMe", "portfolio", "projects", "workedAt", "skills"],
-    current_div = div_id_list[0],
-    div_range = new Object(),
-    sidebar_active_href = null;
-
-const delay_time_for_event_listener = 1000;
 
 var checkIfDivEnd = (div_id, scroll_top, down_direction) => { // to check if div end hits window bottom
     // console.log("For div: ", div_id, ", scroll_top: ", scroll_top, ", window_height: ", $(window).height(), ", div_height: ", $("#".concat(div_id)).height());
