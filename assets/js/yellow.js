@@ -29,6 +29,15 @@ var resizeBasedOnWindowForProjects = () => {
     $(".sectionContent").css({
         "max-height": ($(window).height() - $(".sectionTitle").height()).toString().concat("px")
     });
+    $("#aboutMe > .sectionContent.left").css({
+        "max-height": (2*($(window).height() - $(".sectionTitle").height())/5).toString().concat("px")
+    });
+    $("#aboutMe > .sectionContent.right").css({
+        "max-height": (3*($(window).height() - $(".sectionTitle").height())/5).toString().concat("px")
+    });
+    $("#skills > .sectionContent").css({
+        "max-height": ($(window).height() - $(".sectionTitle").height() - $("#skills > .sectionFooter").height()).toString().concat("px")
+    });
     resized = true;
 }
 

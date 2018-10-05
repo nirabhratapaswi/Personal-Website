@@ -80,6 +80,9 @@ var showPage = () => {
                                 $(this).find('.skillbar-bar').animate({
                                     width: $(this).attr('data-percent')
                                 }, 1500);
+                                setTimeout(() => {
+                                    $(".skillbar-bar").html("<div class='skillbar-circle'></div>");
+                                }, 1500);
                             });
                         }, 600, index);
                     }

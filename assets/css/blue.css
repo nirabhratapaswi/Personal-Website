@@ -29,7 +29,7 @@
 	font-weight:bold;
 	font-size:13px;
 	color:#ffffff;
-	background:#6adcfa;
+	background: #0ABDA0;
 	-webkit-border-top-left-radius:3px;
 	-webkit-border-bottom-left-radius:4px;
 	-moz-border-radius-topleft:3px;
@@ -46,7 +46,7 @@
 
 .skillbar-title span {
 	display:block;
-	background:rgba(0, 0, 0, 0.1);
+	background: #0ABDA0;
 	padding:0 20px;
 	height:10px;
 	line-height:35px;
@@ -59,9 +59,9 @@
 }
 
 .skillbar-bar {
+	background: #0ABDA0;
 	height:10px;
 	width:0px;
-	background:#6adcfa;
 	border-radius:3px;
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
@@ -76,4 +76,14 @@
 	line-height:35px;
 	color:#ffffff;
 	/*color:rgba(0, 0, 0, 0.4);*/
+}
+
+.skillbar-circle {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	float: left;
+	background-color: #0ABDA0;
+	margin-left: 98.5%;
+	margin-top: -5px;
 }

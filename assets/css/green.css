@@ -33,7 +33,7 @@
     height: 15px;
     right: -10px;
     background-color: transparent;
-    border: 5px solid #8b7765;
+    border: 5px solid #0ABDA0;
     top: 20px;
     border-radius: 50%;
     z-index: 1;
@@ -58,9 +58,9 @@
     width: 0;
     /*z-index: 1;*/
     right: 30px;
-    border: medium solid #8b7765;
+    border: medium solid #0ABDA0;
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent #8b7765;
+    border-color: transparent transparent transparent #0ABDA0;
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -72,9 +72,9 @@
     width: 0;
     /*z-index: 1;*/
     left: 30px;
-    border: medium solid #8b7765;
+    border: medium solid #0ABDA0;
     border-width: 10px 10px 10px 0;
-    border-color: transparent #8b7765 transparent transparent;
+    border-color: transparent #0ABDA0 transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -128,4 +128,9 @@
     color: #0ABDA0;
     font-weight: bolder;
     font-size: 28px;
+}
+
+.softwares_used {
+    font-size: 15px;
+    color: #A0FF9B;
 }
