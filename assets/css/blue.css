@@ -78,12 +78,34 @@
 	/*color:rgba(0, 0, 0, 0.4);*/
 }
 
-.skillbar-circle {
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
+.skillbar-square {
+	width: 7px;
+	height: 7px;
+	/*border-radius: 50%;*/
 	float: left;
-	background-color: #0ABDA0;
-	margin-left: 98.5%;
-	margin-top: -5px;
+	background-color: transparent;
+	margin-left: 99.3%;
+	margin-top: 1.5px;
+	-ms-transform: rotate(22.5deg); /* IE 9 */
+    -webkit-transform: rotate(22.5deg); /* Safari */
+    transform: rotate(22.5deg); /* Standard syntax */
+    border-width: 2px;
+    border-color: #FFF336;
+    border-style: solid;
+}
+
+.skillbar-square-new {
+	width: 7px;
+	height: 7px;
+	/*border-radius: 50%;*/
+	float: left;
+	background-color: transparent;
+	margin-left: 99.4%;
+	margin-top: -6.5px;
+	-ms-transform: rotate(67.5deg); /* IE 9 */
+    -webkit-transform: rotate(67.5deg); /* Safari */
+    transform: rotate(67.5deg); /* Standard syntax */
+    border-width: 2px;
+    border-color: #FFF336;
+    border-style: solid;
 }

@@ -319,3 +319,12 @@ elastic {  0% {
     opacity: 1;
     margin: 5px auto;
 }
+
+.nav_icons {
+  width: 10%;
+  height: 10%;
+}
+
+.icon_inactive {
+  display: none;
+}
