@@ -76,6 +76,19 @@ var showPage = () => { // NOTE: This takes the active href for current page calc
                     $("#content > div:nth-child(".concat((index + 1).toString(), ") .sectionContent.right")).show("slide", {
                         direction: "left"
                     }, 1800, () => {});
+                    $("#content > div:nth-child(".concat((index + 1).toString(), ") .sectionContent > .about_me_left > .appear_from_left:nth-child(1)")).show("slide", {
+                        direction: "left"
+                    }, 1000, () => {
+                        $("#content > div:nth-child(".concat((index + 1).toString(), ") .sectionContent > .about_me_left > .appear_from_left:nth-child(2)")).show("slide", {
+                            direction: "up"
+                        }, 800, () => {
+                            $("#content > div:nth-child(".concat((index + 1).toString(), ") .sectionContent > .appear_from_right")).show("fade", {}, 1500, () => {
+                                $(".about_me_right, .about_me_left").css({
+                                    "overflow-y": "auto"
+                                });
+                            });
+                        });
+                    });
                     // $("#content > div:nth-child(".concat((index + 1).toString(), ") .sectionContent.center")).show("fade", {}, 1500, () => {});
                     if (index != div_id_list.indexOf("skills") + 1) {
                         $("#content > div:nth-child(".concat((index + 1).toString(), ") .sectionContent.center")).show("fade", {}, 1500, () => {});
@@ -261,6 +274,7 @@ var disableScrollClickAndEventListeners = () => {
 }
 
 var scrollDownClickEvent = scroll_top => {
+    current_div = whichDiv($(this).scrollTop());
     if (div_id_list.indexOf(current_div) < div_id_list.length - 1) {
         gotoDiv(div_id_list[div_id_list.indexOf(current_div) + 1]);
         disableScrollClickAndEventListeners(delay_time_for_event_listener);
@@ -285,6 +299,7 @@ var scrollDownClickEvent = scroll_top => {
 }
 
 var scrollUpClickEvent = scroll_top => {
+    current_div = whichDiv($(this).scrollTop());
     if (div_id_list.indexOf(current_div) > 0) {
         gotoDiv(div_id_list[div_id_list.indexOf(current_div) - 1]);
         disableScrollClickAndEventListeners(delay_time_for_event_listener);

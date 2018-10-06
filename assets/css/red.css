@@ -328,3 +328,7 @@ elastic {  0% {
 .icon_inactive {
   display: none;
 }
+
+.important_text {
+  color: #0ABDA0;
+}

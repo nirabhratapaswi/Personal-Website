@@ -125,22 +125,22 @@ i {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
     /*margin-bottom: 2%;*/
-    margin-bottom: -24%;
+    margin-bottom: -12%;
 }
 
 .scroll_down_symbol {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     /*margin-bottom: 12%;*/
-    margin-bottom: -15%;
+    margin-bottom: 0%;
 }
 
 .scroll_up {
     position: fixed;
     right: 80px;
     top: 80px;
-    height: 80px;
-    width: 80px;
+    height: 2em;
+    width: 2em;
     z-index: 1;
     background-color: #2E2E31;
     border-style: solid;
@@ -154,8 +154,8 @@ i {
     position: fixed;
     right: 80px;
     bottom: 80px;
-    height: 80px;
-    width: 80px;
+    height: 2em;
+    width: 2em;
     z-index: 1;
     background-color: #2E2E31;
     border-style: solid;
@@ -169,21 +169,21 @@ i {
     .scroll_up {
         right: 120px;
         top: 120px;
-        width: 120px;
-        height: 120px;
+        width: 3em;
+        height: 3em;
     }
     .scroll_down {
         right: 120px;
         bottom: 120px;
-        width: 120px;
-        height: 120px;
+        width: 3em;
+        height: 3em;
     }
     .scroll_up_symbol {
-        margin-bottom: -40%;
+        margin-bottom: -32%;
     }
     
     .scroll_down_symbol {
-        margin-bottom: -30%;
+        margin-bottom: -20%;
     }
 }
 
