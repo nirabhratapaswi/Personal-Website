@@ -51,7 +51,6 @@ var showPage = () => { // NOTE: This takes the active href for current page calc
         if (sidebar_active_href.attr("href") == "#".concat($($("#content > div")[index]).attr("id"))) {
             if (index > 0) {
                 $(".header_class > ul li img").each(function(index_1) {
-                    console.log("Index----: ", index_1);
                     if ($(this).siblings("a").attr("href") == sidebar_active_href.attr("href")) {
                         if (index_1 % 2 == 0) {
                             $(this).removeClass("icon_inactive");
@@ -164,8 +163,6 @@ var showPageIfNotShown = page_index => {
 var changeIconForNav = () => { // Changes nav svg icon color to active
     console.log("changeIconForNav called.");
     $(".header_class > ul li img").each(function(index_1) {
-        console.log("Index----: ", index_1);
-        console.log($(this).siblings("a").attr("href"), " : ", sidebar_active_href.attr("href"));
         if ($(this).siblings("a").attr("href") == sidebar_active_href.attr("href")) {
             if (index_1 % 2 == 0) {
                 $(this).removeClass("icon_inactive");
